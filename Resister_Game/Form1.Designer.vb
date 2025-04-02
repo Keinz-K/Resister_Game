@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Title = New Label()
         Freemode_l = New Label()
         How_play = New Label()
@@ -66,33 +66,36 @@ Partial Class Form1
         ' 
         Title.AutoSize = True
         Title.BackColor = SystemColors.ControlLightLight
-        Title.Font = New Font("Yu Gothic UI", 25F, FontStyle.Regular, GraphicsUnit.Point)
-        Title.Location = New Point(26, 40)
+        Title.Font = New Font("Yu Gothic UI", 25F)
+        Title.Location = New Point(23, 30)
         Title.Margin = New Padding(2, 0, 2, 0)
         Title.Name = "Title"
-        Title.Size = New Size(310, 57)
+        Title.Size = New Size(250, 46)
         Title.TabIndex = 0
-        Title.Text = "抵抗色あてゲーム"' 
+        Title.Text = "抵抗色あてゲーム"
+        ' 
         ' Freemode_l
         ' 
         Freemode_l.AutoSize = True
         Freemode_l.BackColor = SystemColors.ButtonHighlight
-        Freemode_l.Location = New Point(102, 113)
+        Freemode_l.Location = New Point(89, 85)
         Freemode_l.Margin = New Padding(2, 0, 2, 0)
         Freemode_l.Name = "Freemode_l"
-        Freemode_l.Size = New Size(129, 20)
+        Freemode_l.Size = New Size(102, 15)
         Freemode_l.TabIndex = 1
-        Freemode_l.Text = "はじめる(フリーモード)"' 
+        Freemode_l.Text = "はじめる(フリーモード)"
+        ' 
         ' How_play
         ' 
         How_play.AutoSize = True
         How_play.BackColor = SystemColors.ButtonHighlight
-        How_play.Location = New Point(143, 205)
+        How_play.Location = New Point(125, 154)
         How_play.Margin = New Padding(2, 0, 2, 0)
         How_play.Name = "How_play"
-        How_play.Size = New Size(52, 20)
+        How_play.Size = New Size(41, 15)
         How_play.TabIndex = 2
-        How_play.Text = "遊び方"' 
+        How_play.Text = "遊び方"
+        ' 
         ' Title_Panel
         ' 
         Title_Panel.BackColor = SystemColors.ActiveCaption
@@ -101,10 +104,10 @@ Partial Class Form1
         Title_Panel.Controls.Add(How_play)
         Title_Panel.Controls.Add(Title)
         Title_Panel.Controls.Add(Freemode_l)
-        Title_Panel.Location = New Point(10, 81)
+        Title_Panel.Location = New Point(9, 61)
         Title_Panel.Margin = New Padding(0)
         Title_Panel.Name = "Title_Panel"
-        Title_Panel.Size = New Size(360, 240)
+        Title_Panel.Size = New Size(315, 180)
         Title_Panel.TabIndex = 3
         ' 
         ' Gosa_l
@@ -112,33 +115,35 @@ Partial Class Form1
         Gosa_l.AutoSize = True
         Gosa_l.BackColor = Color.White
         Gosa_l.ForeColor = Color.Black
-        Gosa_l.Location = New Point(124, 176)
+        Gosa_l.Location = New Point(108, 132)
         Gosa_l.Margin = New Padding(2, 0, 2, 0)
         Gosa_l.Name = "Gosa_l"
-        Gosa_l.Size = New Size(158, 20)
+        Gosa_l.Size = New Size(126, 15)
         Gosa_l.TabIndex = 4
-        Gosa_l.Text = "はじめる(誤差選択モード)"' 
+        Gosa_l.Text = "はじめる(誤差選択モード)"
+        ' 
         ' Five_l
         ' 
         Five_l.AutoSize = True
         Five_l.BackColor = Color.White
         Five_l.ForeColor = Color.Black
-        Five_l.Location = New Point(147, 145)
+        Five_l.Location = New Point(129, 109)
         Five_l.Margin = New Padding(2, 0, 2, 0)
         Five_l.Name = "Five_l"
-        Five_l.Size = New Size(136, 20)
+        Five_l.Size = New Size(108, 15)
         Five_l.TabIndex = 3
-        Five_l.Text = "はじめる(5色帯モード)"' 
+        Five_l.Text = "はじめる(5色帯モード)"
+        ' 
         ' FreeMode_Screen
         ' 
         FreeMode_Screen.BackColor = Color.Chocolate
         FreeMode_Screen.Controls.Add(Panel2)
         FreeMode_Screen.Controls.Add(Return_label)
         FreeMode_Screen.Controls.Add(TextBox1)
-        FreeMode_Screen.Location = New Point(35, 34)
+        FreeMode_Screen.Location = New Point(31, 26)
         FreeMode_Screen.Margin = New Padding(2)
         FreeMode_Screen.Name = "FreeMode_Screen"
-        FreeMode_Screen.Size = New Size(360, 240)
+        FreeMode_Screen.Size = New Size(315, 180)
         FreeMode_Screen.TabIndex = 4
         FreeMode_Screen.Visible = False
         ' 
@@ -154,7 +159,7 @@ Partial Class Form1
         Panel2.Location = New Point(0, 0)
         Panel2.Margin = New Padding(2)
         Panel2.Name = "Panel2"
-        Panel2.Size = New Size(358, 185)
+        Panel2.Size = New Size(313, 139)
         Panel2.TabIndex = 10
         ' 
         ' Resist_body
@@ -165,141 +170,148 @@ Partial Class Form1
         Resist_body.Controls.Add(L_4)
         Resist_body.Controls.Add(L_2)
         Resist_body.Controls.Add(L_1)
-        Resist_body.Location = New Point(52, 126)
+        Resist_body.Location = New Point(46, 94)
         Resist_body.Margin = New Padding(2)
         Resist_body.Name = "Resist_body"
-        Resist_body.Size = New Size(130, 66)
+        Resist_body.Size = New Size(114, 50)
         Resist_body.TabIndex = 10
         ' 
         ' L_5
         ' 
         L_5.BackColor = Color.Black
-        L_5.Location = New Point(122, 14)
+        L_5.Location = New Point(107, 10)
         L_5.Margin = New Padding(2)
         L_5.Name = "L_5"
-        L_5.Size = New Size(25, 66)
+        L_5.Size = New Size(22, 50)
         L_5.TabIndex = 11
         ' 
         ' L_3
         ' 
         L_3.BackColor = Color.Black
-        L_3.Location = New Point(65, 0)
+        L_3.Location = New Point(57, 0)
         L_3.Margin = New Padding(2)
         L_3.Name = "L_3"
-        L_3.Size = New Size(25, 66)
+        L_3.Size = New Size(22, 50)
         L_3.TabIndex = 9
         ' 
         ' L_4
         ' 
         L_4.BackColor = Color.Black
-        L_4.Location = New Point(94, 0)
+        L_4.Location = New Point(82, 0)
         L_4.Margin = New Padding(2)
         L_4.Name = "L_4"
-        L_4.Size = New Size(25, 66)
+        L_4.Size = New Size(22, 50)
         L_4.TabIndex = 9
         ' 
         ' L_2
         ' 
         L_2.BackColor = Color.Black
-        L_2.Location = New Point(35, 0)
+        L_2.Location = New Point(31, 0)
         L_2.Margin = New Padding(2)
         L_2.Name = "L_2"
-        L_2.Size = New Size(25, 66)
+        L_2.Size = New Size(22, 50)
         L_2.TabIndex = 9
         ' 
         ' L_1
         ' 
         L_1.BackColor = Color.Black
-        L_1.Location = New Point(6, 0)
+        L_1.Location = New Point(5, 0)
         L_1.Margin = New Padding(2)
         L_1.Name = "L_1"
-        L_1.Size = New Size(25, 66)
+        L_1.Size = New Size(22, 50)
         L_1.TabIndex = 8
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.Location = New Point(98, 13)
+        PictureBox1.Location = New Point(86, 10)
+        PictureBox1.Margin = New Padding(3, 2, 3, 2)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(183, 91)
+        PictureBox1.Size = New Size(160, 68)
         PictureBox1.TabIndex = 12
         PictureBox1.TabStop = False
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(302, 13)
+        Label4.Location = New Point(264, 10)
         Label4.Margin = New Padding(2, 0, 2, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(42, 20)
+        Label4.Size = New Size(33, 15)
         Label4.TabIndex = 2
-        Label4.Text = "スコア"' 
+        Label4.Text = "スコア"
+        ' 
         ' Score_0
         ' 
         Score_0.AutoSize = True
-        Score_0.Location = New Point(313, 54)
+        Score_0.Location = New Point(274, 40)
         Score_0.Margin = New Padding(2, 0, 2, 0)
         Score_0.Name = "Score_0"
-        Score_0.Size = New Size(17, 20)
+        Score_0.Size = New Size(13, 15)
         Score_0.TabIndex = 7
-        Score_0.Text = "0"' 
+        Score_0.Text = "0"
+        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(12, 13)
+        Label5.Location = New Point(10, 10)
         Label5.Margin = New Padding(2, 0, 2, 0)
         Label5.Name = "Label5"
-        Label5.Size = New Size(84, 20)
+        Label5.Size = New Size(67, 15)
         Label5.TabIndex = 3
-        Label5.Text = "連続正解数"' 
+        Label5.Text = "連続正解数"
+        ' 
         ' Score_1
         ' 
         Score_1.AutoSize = True
-        Score_1.Location = New Point(34, 54)
+        Score_1.Location = New Point(30, 40)
         Score_1.Margin = New Padding(2, 0, 2, 0)
         Score_1.Name = "Score_1"
-        Score_1.Size = New Size(41, 20)
+        Score_1.Size = New Size(31, 15)
         Score_1.TabIndex = 6
-        Score_1.Text = "0000"' 
+        Score_1.Text = "0000"
+        ' 
         ' Return_label
         ' 
         Return_label.AutoSize = True
         Return_label.BackColor = SystemColors.ActiveCaption
-        Return_label.Font = New Font("Yu Gothic UI", 16F, FontStyle.Regular, GraphicsUnit.Point)
-        Return_label.Location = New Point(13, 187)
+        Return_label.Font = New Font("Yu Gothic UI", 16F)
+        Return_label.Location = New Point(11, 140)
         Return_label.Margin = New Padding(2, 0, 2, 0)
         Return_label.Name = "Return_label"
-        Return_label.Size = New Size(167, 37)
+        Return_label.Size = New Size(136, 30)
         Return_label.TabIndex = 9
-        Return_label.Text = "タイトルへ戻る"' 
+        Return_label.Text = "タイトルへ戻る"
+        ' 
         ' TextBox1
         ' 
         TextBox1.ImeMode = ImeMode.Off
-        TextBox1.Location = New Point(110, 126)
+        TextBox1.Location = New Point(96, 94)
         TextBox1.Margin = New Padding(2)
         TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(121, 27)
+        TextBox1.Size = New Size(106, 23)
         TextBox1.TabIndex = 5
         ' 
         ' How_play_panel
         ' 
         How_play_panel.BackColor = SystemColors.AppWorkspace
         How_play_panel.Controls.Add(Label1)
-        How_play_panel.Location = New Point(85, 10)
+        How_play_panel.Location = New Point(74, 8)
         How_play_panel.Margin = New Padding(2)
         How_play_panel.Name = "How_play_panel"
-        How_play_panel.Size = New Size(360, 240)
+        How_play_panel.Size = New Size(315, 180)
         How_play_panel.TabIndex = 3
         How_play_panel.Visible = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(39, 24)
+        Label1.Location = New Point(34, 18)
         Label1.Margin = New Padding(2, 0, 2, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(53, 20)
+        Label1.Size = New Size(41, 15)
         Label1.TabIndex = 0
-        Label1.Text = "Label1"' 
+        Label1.Text = "Label1"
+        ' 
         ' Random_mode
         ' 
         Random_mode.BackColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
@@ -309,80 +321,86 @@ Partial Class Form1
         Random_mode.Controls.Add(B_3)
         Random_mode.Controls.Add(B_2)
         Random_mode.Controls.Add(B_1)
-        Random_mode.Location = New Point(12, 20)
+        Random_mode.Location = New Point(10, 15)
         Random_mode.Margin = New Padding(2)
         Random_mode.Name = "Random_mode"
-        Random_mode.Size = New Size(360, 240)
+        Random_mode.Size = New Size(315, 180)
         Random_mode.TabIndex = 5
         Random_mode.Visible = False
         ' 
         ' Change_5
         ' 
         Change_5.AutoSize = True
-        Change_5.Location = New Point(272, 201)
+        Change_5.Location = New Point(238, 151)
         Change_5.Margin = New Padding(2, 0, 2, 0)
         Change_5.Name = "Change_5"
-        Change_5.Size = New Size(74, 20)
+        Change_5.Size = New Size(58, 15)
         Change_5.TabIndex = 5
-        Change_5.Text = "5本に変更"' 
+        Change_5.Text = "5本に変更"
+        ' 
         ' Change_4
         ' 
         Change_4.AutoSize = True
-        Change_4.Location = New Point(180, 201)
+        Change_4.Location = New Point(158, 151)
         Change_4.Margin = New Padding(2, 0, 2, 0)
         Change_4.Name = "Change_4"
-        Change_4.Size = New Size(74, 20)
+        Change_4.Size = New Size(58, 15)
         Change_4.TabIndex = 4
-        Change_4.Text = "4本に変更"' 
+        Change_4.Text = "4本に変更"
+        ' 
         ' B_4
         ' 
         B_4.AutoSize = True
-        B_4.Font = New Font("Yu Gothic UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        B_4.Location = New Point(171, 154)
+        B_4.Font = New Font("Yu Gothic UI", 10.8F)
+        B_4.Location = New Point(150, 116)
         B_4.Margin = New Padding(2, 0, 2, 0)
         B_4.Name = "B_4"
-        B_4.Size = New Size(63, 25)
+        B_4.Size = New Size(53, 20)
         B_4.TabIndex = 3
-        B_4.Text = "Label7"' 
+        B_4.Text = "Label7"
+        ' 
         ' B_3
         ' 
         B_3.AutoSize = True
-        B_3.Font = New Font("Yu Gothic UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        B_3.Location = New Point(98, 154)
+        B_3.Font = New Font("Yu Gothic UI", 10.8F)
+        B_3.Location = New Point(86, 116)
         B_3.Margin = New Padding(2, 0, 2, 0)
         B_3.Name = "B_3"
-        B_3.Size = New Size(63, 25)
+        B_3.Size = New Size(53, 20)
         B_3.TabIndex = 2
-        B_3.Text = "Label6"' 
+        B_3.Text = "Label6"
+        ' 
         ' B_2
         ' 
         B_2.AutoSize = True
-        B_2.Font = New Font("Yu Gothic UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        B_2.Location = New Point(171, 121)
+        B_2.Font = New Font("Yu Gothic UI", 10.8F)
+        B_2.Location = New Point(150, 91)
         B_2.Margin = New Padding(2, 0, 2, 0)
         B_2.Name = "B_2"
-        B_2.Size = New Size(63, 25)
+        B_2.Size = New Size(53, 20)
         B_2.TabIndex = 1
-        B_2.Text = "Label3"' 
+        B_2.Text = "Label3"
+        ' 
         ' B_1
         ' 
         B_1.AutoSize = True
-        B_1.Font = New Font("Yu Gothic UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point)
-        B_1.Location = New Point(98, 121)
+        B_1.Font = New Font("Yu Gothic UI", 10.8F)
+        B_1.Location = New Point(86, 91)
         B_1.Margin = New Padding(2, 0, 2, 0)
         B_1.Name = "B_1"
-        B_1.Size = New Size(63, 25)
+        B_1.Size = New Size(53, 20)
         B_1.TabIndex = 0
-        B_1.Text = "Label2"' 
+        B_1.Text = "Label2"
+        ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(454, 332)
+        ClientSize = New Size(397, 249)
+        Controls.Add(FreeMode_Screen)
+        Controls.Add(Random_mode)
         Controls.Add(How_play_panel)
         Controls.Add(Title_Panel)
-        Controls.Add(Random_mode)
-        Controls.Add(FreeMode_Screen)
         FormBorderStyle = FormBorderStyle.FixedSingle
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(2)

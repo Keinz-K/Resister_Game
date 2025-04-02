@@ -121,7 +121,7 @@ Module _4_And_5_Mode
         Form1.TextBox1.ForeColor = Color.Gray
         Form1.TextBox1.Text = "ここに値を入力"
     End Sub
-    Sub Color_rnd_Five()
+    Sub Color_rnd_Five() '位置設定
         Dim i As Integer
         Form1.L_5.Visible = True
         For i = 0 To 4
@@ -143,7 +143,7 @@ Module _4_And_5_Mode
             Color_rnd_Five()
         End If
     End Sub
-    Sub Color_rnd_Four()
+    Sub Color_rnd_Four() '位置設定(5色帯モード)
         Dim i As Integer
         Form1.L_5.Visible = False
         For i = 0 To 3
@@ -207,161 +207,78 @@ Module _4_And_5_Mode
             End If
         End If
     End Sub
-    Function C_one() As Integer
-        Dim num_R As Integer = 10 - 1
-        Dim i As Integer = Randbetween(1, num_R)
+    Sub Color_Parret(L As Panel, i As Integer)
         Select Case i
-            'Case 1 '
-            '    Form1.L_1.BackColor = Color.Black
-            '    Exit Select
-            Case 1
-                Form1.L_1.BackColor = Color.Brown
-            Case 2
-                Form1.L_1.BackColor = Color.Red
-            Case 3
-                Form1.L_1.BackColor = Color.Orange
-            Case 4
-                Form1.L_1.BackColor = Color.Yellow
-            Case 5
-                Form1.L_1.BackColor = Color.Green
-            Case 6
-                Form1.L_1.BackColor = Color.Blue
-            Case 7
-                Form1.L_1.BackColor = Color.Purple
-            Case 8
-                Form1.L_1.BackColor = Color.Gray
-            Case 9
-                Form1.L_1.BackColor = Color.White
+            Case 1 : L.BackColor = Color.Black
+            Case 2 : L.BackColor = Color.Brown
+            Case 3 : L.BackColor = Color.Red
+            Case 4 : L.BackColor = Color.Orange
+            Case 5 : L.BackColor = Color.Yellow
+            Case 6 : L.BackColor = Color.Green
+            Case 7 : L.BackColor = Color.Blue
+            Case 8 : L.BackColor = Color.Purple
+            Case 9 : L.BackColor = Color.Gray
+            Case 10 : L.BackColor = Color.White
         End Select
-        C_one = i
+    End Sub
+    Function C_one() As Integer
+        Dim i As Integer = Randbetween(1 + 1, 10)
+        Color_Parret(Form1.L_1, i)
+        C_one = i - 1
     End Function
     Function C_two() As Integer
-        Dim num_R As Integer = 10
-        Dim i As Integer = Randbetween(1, num_R)
-        Select Case i
-            Case 1
-                Form1.L_2.BackColor = Color.Black
-            Case 2
-                Form1.L_2.BackColor = Color.Brown
-            Case 3
-                Form1.L_2.BackColor = Color.Red
-            Case 4
-                Form1.L_2.BackColor = Color.Orange
-            Case 5
-                Form1.L_2.BackColor = Color.Yellow
-            Case 6
-                Form1.L_2.BackColor = Color.Green
-            Case 7
-                Form1.L_2.BackColor = Color.Blue
-            Case 8
-                Form1.L_2.BackColor = Color.Purple
-            Case 9
-                Form1.L_2.BackColor = Color.Gray
-            Case 10
-                Form1.L_2.BackColor = Color.White
-        End Select
+        Dim i As Integer = Randbetween(1, 10)
+        Color_Parret(Form1.L_2, i)
         C_two = i - 1
     End Function
     Function C_five() As Integer '3
-        Dim num_R As Integer = 10
-        Dim i As Integer = Randbetween(1, num_R)
-        Select Case i
-            Case 1
-                Form1.L_3.BackColor = Color.Black
-            Case 2
-                Form1.L_3.BackColor = Color.Brown
-            Case 3
-                Form1.L_3.BackColor = Color.Red
-            Case 4
-                Form1.L_3.BackColor = Color.Orange
-            Case 5
-                Form1.L_3.BackColor = Color.Yellow
-            Case 6
-                Form1.L_3.BackColor = Color.Green
-            Case 7
-                Form1.L_3.BackColor = Color.Blue
-            Case 8
-                Form1.L_3.BackColor = Color.Purple
-            Case 9
-                Form1.L_3.BackColor = Color.Gray
-            Case 10
-                Form1.L_3.BackColor = Color.White
-        End Select
+        Dim i As Integer = Randbetween(1, 10)
+        Color_Parret(Form1.L_3, i)
         C_five = i - 1
     End Function
-    Function C_three() As Integer  '乗数
-        Dim num_R As Integer = 10
-        Dim i As Integer = Randbetween(1, num_R)
+    Function Color_Parret_2(L As Panel, i As Integer) As Integer '乗数
         Select Case i
             Case 1
-                Form1.L_3.BackColor = Color.Black
-                C_three = i - 1
+                L.BackColor = Color.Black
+                Return i - 1
             Case 2
-                Form1.L_3.BackColor = Color.Brown
-                C_three = i - 1
+                L.BackColor = Color.Brown
+                Return i - 1
             Case 3
-                Form1.L_3.BackColor = Color.Red
-                C_three = i - 1
+                L.BackColor = Color.Red
+                Return i - 1
             Case 4
-                Form1.L_3.BackColor = Color.Orange
-                C_three = i - 1
+                L.BackColor = Color.Orange
+                Return i - 1
             Case 5
-                Form1.L_3.BackColor = Color.Yellow
-                C_three = i - 1
+                L.BackColor = Color.Yellow
+                Return i - 1
             Case 6
-                Form1.L_3.BackColor = Color.Green
-                C_three = i - 1
+                L.BackColor = Color.Green
+                Return i - 1
             Case 7
-                Form1.L_3.BackColor = Color.Blue
-                C_three = i - 1
+                L.BackColor = Color.Blue
+                Return i - 1
             Case 8
-                Form1.L_3.BackColor = Color.Purple
-                C_three = i - 1
-            Case 9 ' C_three = -1
-                Form1.L_3.BackColor = Color.Gold
-                C_three = -1
-            Case 10 ' C_three = -2
-                Form1.L_3.BackColor = Color.Silver
-                C_three = -2
+                L.BackColor = Color.Purple
+                Return i - 1
+            Case 9
+                L.BackColor = Color.Gray
+                Return -1
+            Case 10
+                L.BackColor = Color.White
+                Return -2
+            Case Else
+                Return 0
         End Select
-        Return C_three
+    End Function
+    Function C_three() As Integer  '乗数
+        Dim i As Integer = Randbetween(1, 10)
+        Return Color_Parret_2(Form1.L_3, i)
     End Function
     Function C_three_5() As Integer  '乗数
-        Dim num_R As Integer = 10
-        Dim i As Integer = Randbetween(1, num_R)
-        Select Case i
-            Case 1
-                Form1.L_4.BackColor = Color.Black
-                C_three_5 = i - 1
-            Case 2
-                Form1.L_4.BackColor = Color.Brown
-                C_three_5 = i - 1
-            Case 3
-                Form1.L_4.BackColor = Color.Red
-                C_three_5 = i - 1
-            Case 4
-                Form1.L_4.BackColor = Color.Orange
-                C_three_5 = i - 1
-            Case 5
-                Form1.L_4.BackColor = Color.Yellow
-                C_three_5 = i - 1
-            Case 6
-                Form1.L_4.BackColor = Color.Green
-                C_three_5 = i - 1
-            Case 7
-                Form1.L_4.BackColor = Color.Blue
-                C_three_5 = i - 1
-            Case 8
-                Form1.L_4.BackColor = Color.Purple
-                C_three_5 = i - 1
-            Case 9
-                Form1.L_4.BackColor = Color.Gold
-                C_three_5 = -1
-            Case 10
-                Form1.L_4.BackColor = Color.Silver
-                C_three_5 = -2
-        End Select
-        Return C_three_5
+        Dim i As Integer = Randbetween(1, 10)
+        Return Color_Parret_2(Form1.L_4, i)
     End Function
     Function C_four() As String  '許容差
         Dim num_R As Integer = 8 '9
@@ -436,8 +353,7 @@ Module _4_And_5_Mode
     End Function
 
     Function C_four_5_Label() As String '許容差
-        Dim num_R As Integer = 8 '9
-        Dim i As Integer = Randbetween(1, num_R)
+        Dim i As Integer = Randbetween(1, 8) '9
         Select Case i
             Case 1
                 Form1.L_5.BackColor = Color.Brown
